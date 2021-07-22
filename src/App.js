@@ -7,25 +7,30 @@ import Sidebar from './Components/Sidebar';
 import { Navbar } from 'react-bootstrap';
 import Products from './Components/Products'; 
 
+import { BrowserRouter as Router } from 'react-router-dom';
+
 function App() {
   return (
     
+    <Router>
       <div className="App">
         <Navbar bg="myColor" variant="dark">
   
-          <Navbar.Brand href="#">Navbar with text</Navbar.Brand>
+          <Navbar.Brand href="#">ProductosPY</Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
           <Navbar.Text>
-           Signed in as: <a href="#">Mark Otto</a>
+           Signed in as: <a href="#">Ana Rivas</a>
           </Navbar.Text>
         </Navbar.Collapse>
         
         </Navbar>
         <Sidebar></Sidebar>
         <Products></Products>
+        
 
       </div>
+    </Router>
   );
 }
 

@@ -1,80 +1,68 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Card, Button } from 'react-bootstrap';
-
+import { BrowserRouter as Router } from 'react-router-dom';
+import SidebarProducts from './SidebarProducts'; 
 function Products() {
     return (
-       
-    <div className="ContentProduct">
-<div class="container">
-        <div className="ProducstView"> 
-            <div class="row">
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="card-body">
-                        <Card style={{ width: '18rem' }} className="item">
-                            <Card.Img variant="top" src="https://source.unsplash.com/user/erondu/600x400" />
-                            <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
-                                <Card.Text>
-                                Some Custom text one can write here
-                                </Card.Text>
-                                <Button variant="primary">Go somewhere</Button>
-                            </Card.Body>
-                        </Card>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="card-body">
-                        <Card style={{ width: '18rem' }} className="item">
-                            <Card.Img variant="top" src="https://source.unsplash.com/user/erondu/600x400" />
-                            <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
-                                <Card.Text>
-                                Some Custom text one can write here
-                                </Card.Text>
-                                <Button variant="primary">Go somewhere</Button>
-                            </Card.Body>
-                        </Card>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="card-body">
-                        <Card style={{ width: '18rem' }} className="item">
-                            <Card.Img variant="top" src="https://source.unsplash.com/user/erondu/600x400" />
-                            <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
-                                <Card.Text>
-                                Some Custom text one can write here
-                                </Card.Text>
-                                <Button variant="primary">Go somewhere</Button>
-                            </Card.Body>
-                        </Card>
-                    </div>
-                </div>
-
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="card-body">
-                    <Card style={{ width: '18rem' }} className="item">
-                        <Card.Img variant="top" src="https://source.unsplash.com/user/erondu/600x400" />
-                        <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
-                            <Card.Text>
-                            Some Custom text one can write here
-                            </Card.Text>
-                            <Button variant="primary">Go somewhere</Button>
-                        </Card.Body>
-                    </Card>
-                </div>
-            </div>
-        </div>
-    </div>
+        <Router>
     
+            <div className="ProducstView"> 
+                <div class="container">
+
+                <div class="row no-gutters">
+                    <div class="col-6 col-md-4">
+                        <SidebarProducts></SidebarProducts>
+                    </div>
+
+                <div class="col-12 col-md-8">
+                
+                    
+                    <div class="card-deck">
+                        
+                        <div class="card">
+                            <img class="card-img-top" src="" alt="Card image cap"/>
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img class="card-img-top" src="..." alt="Card image cap"/>
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img class="card-img-top" src="..." alt="Card image cap"/>
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                    </div>
+
+
+                    </div>
+        
+                </div>
+                </div>
+            
+        
+               
     
-  </div>
-  </div>
-      
+            
+        
+        </Router> 
     )
 }
 
