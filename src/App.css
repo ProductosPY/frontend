@@ -6,11 +6,9 @@
   text-align: center;
   background-image: url('https://th.bing.com/th/id/R4ed734d128564ae5443248620fcbcbbf?rik=oK64suGVPy%2fi8g&pid=ImgRaw');
   background-size: cover;
-  height: 100vh;
   color: #f5f5f5;
-
-  width:100vw;
-  height:100vh;
+  width: 100vw;
+  height: 100vh;
 }
 
 .card-img-top {
@@ -23,23 +21,22 @@ p{
 }
 
 body{
-  margin:0%;
-  padding:0%;
+  margin: 0%;
+  padding: 0%;
   background-color:#243C5A;
-
 }
 
 .Sidebar{
-  height:100%;
+  height: 100%;
   width: 700px;
   background-color:#243C5A;
   opacity: 0.9;
 }
 
 .Title1{
-  padding-top:30%;
-  padding-left:15%;
-  padding-right:15%;
+  padding-top: 30%;
+  padding-left: 15%;
+  padding-right: 15%;
 }
 
 h5{
@@ -52,14 +49,9 @@ h5{
 }
 
 .Topbar{
-  text-align:right;
+  text-align: right;
 }
 
 .container{
   margin-left: 0px;
 }
-
-
-
-
-
