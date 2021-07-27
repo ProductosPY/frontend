@@ -6,62 +6,46 @@ import SidebarProducts from './SidebarProducts';
 function Products() {
     return (
         <Router>
-    
-            <div className="ProducstView"> 
-                <div class="container">
-
-                <div class="row no-gutters">
-                    <div class="col-6 col-md-4">
-                        <SidebarProducts></SidebarProducts>
-                    </div>
-
-                <div class="col-12 col-md-8">
+        
+        <div class="row no-gutters">
+            <div class="col-6 col-md-4">
+                <SidebarProducts></SidebarProducts>
+            </div>
                 
-                    
-                    <div class="card-deck">
-                        
-                        <div class="card">
-                            <img class="card-img-top" src="" alt="Card image cap"/>
+                <div class="col-12 col-md-8">
+                    <div class="card-deck" w-75> 
+                        <div class="card" style={{ width: '20rem' }}>
+                            <img class="card-img-top" src="https://cdn.shopify.com/s/files/1/0501/3218/9340/products/IMG-20210129-WA0031.jpg?v=1611964113" alt="Card image cap"/>
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                <h5 class="card-title">Tapabocas KN95</h5>
+                                <p class="card-text">Comercial ABC S.A</p>
+                                
+                            </div>
+                        </div>
+                        <div class="card" style={{ width: '20rem' }}>
+                            <img class="card-img-top" src="https://cdn.shopify.com/s/files/1/0501/3218/9340/products/IMG-20210129-WA0031.jpg?v=1611964113" alt="Card image cap"/>
+                            <div class="card-body">
+                                <h5 class="card-title">Tapabocas KN95</h5>
+                                <p class="card-text">Comercial ABC S.A</p>
+                                
                             </div>
                         </div>
 
-                        <div class="card">
-                            <img class="card-img-top" src="..." alt="Card image cap"/>
+                        <div class="card" style={{ width: '20rem' }}>
+                            <img class="card-img-top" src="https://cdn.shopify.com/s/files/1/0501/3218/9340/products/IMG-20210129-WA0031.jpg?v=1611964113" alt="Card image cap"/>
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <img class="card-img-top" src="..." alt="Card image cap"/>
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                <h5 class="card-title">Tapabocas KN95</h5>
+                                <p class="card-text">Comercial ABC S.A</p>
+                                
                             </div>
                         </div>
 
                         
+                       
                     </div>
-                    </div>
-
-
-                    </div>
-        
                 </div>
-                </div>
-            
-        
-               
-    
-            
-        
+            </div>
+                   
         </Router> 
     )
 }

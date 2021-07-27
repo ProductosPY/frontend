@@ -41,17 +41,12 @@ const SidebarProducts = () => {
                   Protección Personal
                 </CDBSidebarMenuItem>
               </NavLink>
-  
-              <NavLink
-                exact
-                to="/hero404"
-                target="_blank"
-                activeClassName="activeClicked"
-              >
-                <CDBSidebarMenuItem icon="exclamation-circle">
-                  404 page
+              <NavLink exact to="/analytics" activeClassName="activeClicked">
+                <CDBSidebarMenuItem icon="chart-line">
+                  Servicios
                 </CDBSidebarMenuItem>
               </NavLink>
+  
             </CDBSidebarMenu>
           </CDBSidebarContent>
   
