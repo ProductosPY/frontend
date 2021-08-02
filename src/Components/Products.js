@@ -1,49 +1,66 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react'
+import axios from 'axios'
+import ReactPaginate from 'react-paginate';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Card, Button } from 'react-bootstrap';
-import { BrowserRouter as Router } from 'react-router-dom';
-import SidebarProducts from './SidebarProducts';
+import { Card,  Row, Container, Button } from 'react-bootstrap';
+
+
 
 function Products() {
-    return (
-        <Router>
-            <div class="row no-gutters">
-                {/* <div class="col-6 col-md-4">
-                    <SidebarProducts></SidebarProducts>
-                </div> */}
-                <div class="col-12 col-md-8">
-                    <div class="card-deck"> 
-                        <div class="card" style={{ width: '20rem' }}>
-                            <img class="card-img-top" src="https://cdn.shopify.com/s/files/1/0501/3218/9340/products/IMG-20210129-WA0031.jpg?v=1611964113" alt="Card image cap"/>
-                            <div class="card-body">
-                                <h5 class="card-title">Tapabocas KN95</h5>
-                                <p class="card-text">Comercial ABC S.A</p>
-                                
-                            </div>
-                        </div>
 
-                        <div class="card" style={{ width: '20rem' }}>
-                            <img class="card-img-top" src="https://cdn.shopify.com/s/files/1/0501/3218/9340/products/IMG-20210129-WA0031.jpg?v=1611964113" alt="Card image cap"/>
-                            <div class="card-body">
-                                <h5 class="card-title">Tapabocas KN95</h5>
-                                <p class="card-text">Comercial ABC S.A</p>
-                                
-                            </div>
-                        </div>
+  const [offset, setOffset] = useState(0);
+  const [data, setData] = useState([]);
+  const [perPage] = useState(10);
+  const [pageCount, setPageCount] = useState(0)
+  
+  const getData = async() => {
+    const res = await axios.get(`https://jsonplaceholder.typicode.com/photos`)
+    const data = res.data;
+              const slice = data.slice(offset, offset + perPage)
+              const postData = slice.map(pd =>
+              
+                <Card class="card" style={{ width: '20%', display: 'inline-block' }} >
+                <Card.Img variant="top" src={pd.thumbnailUrl} />
+                <Card key={pd.id}>
+                <Card.Body>
+                    <Card.Title>{pd.title}</Card.Title>
+                </Card.Body>  
+                </Card>
+                </Card> 
+              
+              )
+           
+              setData(postData)
+              setPageCount(Math.ceil(data.length / perPage))
 
-                        <div class="card" style={{ width: '20rem' }}>
-                            <img class="card-img-top" src="https://cdn.shopify.com/s/files/1/0501/3218/9340/products/IMG-20210129-WA0031.jpg?v=1611964113" alt="Card image cap"/>
-                            <div class="card-body">
-                                <h5 class="card-title">Tapabocas KN95</h5>
-                                <p class="card-text">Comercial ABC S.A</p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </Router> 
-    )
+}
+const handlePageClick = (e) => {
+  const selectedPage = e.selected;
+  setOffset(selectedPage + 1)
+};
+
+useEffect(() => {
+ getData()
+}, [offset])
+
+return (
+  <div>
+    {data}
+     <ReactPaginate
+                  previousLabel={"prev"}
+                  nextLabel={"next"}
+                  breakLabel={"..."}
+                  breakClassName={"break-me"}
+                  pageCount={pageCount}
+                  marginPagesDisplayed={2}
+                  pageRangeDisplayed={5}
+                  onPageChange={handlePageClick}
+                  containerClassName={"pagination"}
+                  subContainerClassName={"pages pagination"}
+                  activeClassName={"active"}/>
+  </div>
+);
 }
 
 export default Products;

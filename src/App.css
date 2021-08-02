@@ -4,7 +4,7 @@
 }
 .App {
   text-align: center;
-  background-image: url('https://th.bing.com/th/id/R4ed734d128564ae5443248620fcbcbbf?rik=oK64suGVPy%2fi8g&pid=ImgRaw');
+  background-image: url('https://picsum.photos/200/300');
   background-size: cover;
   color: #f5f5f5;
   width: 100vw;
@@ -27,8 +27,8 @@ body{
 }
 
 .Sidebar{
-  height: 100%;
-  width: 700px;
+  height: 91%;
+  width: 40%;
   background-color:#243C5A;
   opacity: 0.9;
 }
@@ -54,4 +54,34 @@ h5{
 
 .container{
   margin-left: 0px;
+}
+
+
+.pagination {
+  margin: 15px auto;
+  display: flex;
+  list-style: none;
+  outline: none;
+}
+.pagination > .active > a{
+  background-color: #47ccde ;
+  border-color: #47ccde ;
+  color: #fff;
+}
+.pagination > li > a{
+  border: 1px solid #47ccde ;
+  padding: 5px 10px;
+  outline: none;
+  cursor: pointer;
+}
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{
+  background-color: #47ccde ;
+  border-color: #47ccde;
+  outline: none ;
+}
+.pagination > li > a, .pagination > li > span{
+  color: #47ccde
+}
+.pagination > li:first-child > a, .pagination > li:first-child > span, .pagination > li:last-child > a, .pagination > li:last-child > span{
+  border-radius: unset
 }

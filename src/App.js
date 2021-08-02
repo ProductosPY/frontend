@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Sidebar from './Components/Sidebar';
 import { Navbar } from 'react-bootstrap';
 import Products from './Components/Products'; 
+import SidebarProducts from './Components/SidebarProducts'; 
 import { BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
@@ -22,7 +23,13 @@ function App() {
           </Navbar.Collapse>
         </Navbar>
         <Sidebar></Sidebar>
-        <Products></Products>
+        <div class="row">
+          <div class="col-xs-6 col-sm-4 col-lg-2">
+            <SidebarProducts></SidebarProducts>
+          </div>
+            <div class="col-xs-6 col-sm-8 col-lg-10">
+              <Products></Products></div>
+        </div>
       </div>
     </Router>
   );
